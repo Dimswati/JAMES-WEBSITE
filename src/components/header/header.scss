@@ -1,0 +1,33 @@
+@import "../../utils/theme.css";
+
+.header {
+    display: flex;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: var(--md-sys-color-surface-container-lowest);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    box-shadow: var(--elevation-two);
+    height: 3.5rem;
+
+    .header-content {
+        width: 90vw;
+        display: flex;
+        justify-content: space-between !important;
+        // padding: 16px 0;
+
+        .contact {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+    
+            &__phone, &__email{
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+        }
+    }
+}
