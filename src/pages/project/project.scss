@@ -1,4 +1,101 @@
-.project {
-    width: 90vw;
-    margin: auto;
+main {
+
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        h2 {
+            align-self: flex-start;
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .project-aside {
+        display: flex;
+        flex-direction: column;
+
+        .slider{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-details {
+            width: 330px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            border-radius: 16px;
+            box-shadow: var(--elevation-one);
+            z-index: 100;
+            background-color: var(--md-sys-color-surface-container-lowest);
+
+            .project-detail {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                h4 {
+                    font-weight: 500;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    padding: .2rem 1rem;
+                    background-color: #06ea028c;
+                    border-radius: 50px;
+                    align-self: flex-start;
+                    color: var(--md-sys-color-on-background);
+                }
+            }
+        }
+
+        .whatsapp-button {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: #07EA02;
+            padding: .6rem 2rem;
+            border: none;
+            transition: all .3s ease-in-out;
+            margin-top: 2rem;
+            align-self: center;
+
+            &:hover {
+                outline: 1px solid #07EA02;
+                background-color: transparent;
+            }
+            
+        }
+
+        .share {
+            margin: 2rem 0;
+            h4 {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .share-icons {
+                display: flex;
+                gap: 1rem;
+
+                svg {
+                    color: var(--md-sys-color-on-surface-variant);
+                    font-size: 3rem;
+                    padding: .6rem;
+                    border-radius: 50%;
+                    border: 1px solid var(--md-sys-color-outline-variant);
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--md-sys-color-surface-variant);
+                    }
+                }
+            }
+        }
+    }
 }

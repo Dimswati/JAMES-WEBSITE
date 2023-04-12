@@ -2,9 +2,8 @@
     position: relative;
     background-color: var(--md-sys-color-background);
     border-radius: 12px;
-    // box-shadow: var(--elevation-two);
-    // padding: 10px;
-    cursor: pointer;
+    box-shadow: var(--elevation-two);
+    padding: 1rem;
     // &:hover {
     //     outline: 1px solid var(--md-sys-color-outline-variant);
     //     box-shadow: var(--elevation-two);
@@ -12,8 +11,8 @@
 
     .date {
         position: absolute;
-        top: .8rem;
-        left: 1rem;
+        top: 1.5rem;
+        left: 1.5rem;
         color: yellow;
         display: flex;
         align-items: center;
@@ -42,11 +41,11 @@
         align-self: center;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: var(--md-sys-color-surface-container-lowest);
+        // align-items: center;
+        // padding: 1rem;
+        // background-color: var(--md-sys-color-surface-container-lowest);
         margin-top: 1rem;
-        border-radius: 16px;
+        // border-radius: 16px;
         // outline: 1px solid var(--md-sys-color-outline-variant);
         box-shadow: 0px 12px 40px -24px rgba(0,0,0,0.3);;
 
@@ -64,6 +63,17 @@
             &:hover {
                 background-color: transparent;
                 outline: 1px solid var(--md-sys-color-outline);
+            }
+
+            &.edit{
+                background-color: transparent;
+                outline: 1px solid var(--md-sys-color-outline);
+            }
+            
+            &.delete{
+                background-color: var(--md-sys-color-error);
+                color: var(--md-sys-color-on-error);
+                outline: none;
             }
 
         }

@@ -1,0 +1,20 @@
+main {
+
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        h2 {
+            align-self: flex-start;
+            border-bottom: 1px solid var(--md-sys-color-outline-variant);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .project-aside {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
