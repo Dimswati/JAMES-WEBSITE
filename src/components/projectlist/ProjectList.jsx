@@ -1,8 +1,19 @@
 import SingleProject from '../singleproject/SingleProject'
 import "./projectlist.scss"
 import useFetch from '../../hooks/useFetch';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function ProjectList({category}) {
+
+  // scrollTopTop
+
+  const { pathname } = useLocation()
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   let url;
 

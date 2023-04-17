@@ -1,8 +1,14 @@
 
 .swiper {
-    width: 330px;
-    height: 240px;
+    width: 400px;
+    height: 16rem;
     border-radius: 16px;
+
+    @media (max-width: 780px) {
+        width: 90vw;
+        height: 16rem;
+        border-radius: 16px;
+    }   
 
     .swiper-slide {
 

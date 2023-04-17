@@ -147,8 +147,6 @@ main {
         // border-right: 1px solid var(--md-sys-color-outline-variant);
         // background-color: aqua;
         display: flex;
-        align-items: center;
-        flex-direction: column;
         top: 3.5rem;
         position: sticky;
         height: calc(100vh - 3.5rem);
@@ -167,6 +165,8 @@ main {
         
         @media (max-width: 780px) {
             top: 0rem;
+            height: 100%;
+            overflow: hidden;
             position: relative;
         }   
     }
