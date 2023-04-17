@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <div className={`footer ${show ? 'active' : 'inactive'}`}>
-      <p className='body-medium'>💕 Proudly designed by <a href="https://paulmacharia.com" target="_blank">paulmacharia.com</a></p>
+      <p className='body-medium'>💕 Proudly designed by <a href="https://paulmbatia.com" target="_blank">paulmbatia.com</a></p>
     </div>
   )
 }
