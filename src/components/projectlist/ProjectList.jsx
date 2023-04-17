@@ -32,6 +32,8 @@ export default function ProjectList({category}) {
          return (<SingleProject key={project.id} project={project}/>)
        })
     }
+
+    <button>Load More</button>
     </section>
   )
 }
