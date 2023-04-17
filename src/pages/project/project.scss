@@ -5,10 +5,19 @@ main {
         flex-direction: column;
         margin-top: 2rem;
 
+        @media (max-width: 780px) {
+            margin-top: 0;
+        }   
+
         h2 {
             align-self: flex-start;
             border-bottom: 1px solid var(--md-sys-color-outline-variant);
             margin-bottom: 1rem;
+
+            @media (max-width: 780px) {
+                align-self: center;
+                margin-bottom: 0;
+            }   
         }
     }
 
@@ -49,7 +58,7 @@ main {
                         gap: .5rem;
                         padding: .2rem 1rem;
                         // background-color: #06ea028c;
-                        outline: 1px solid #07EA02;
+                        border: 1px solid #07EA02;
                         border-radius: 50px;
                         align-self: flex-start;
                         color: var(--md-sys-color-on-background);
@@ -70,13 +79,12 @@ main {
             background-color: #07EA02;
             border-radius: 50px;
             padding: .6rem 2rem;
-            border: none;
+            border: 1px solid #07EA02;
             transition: all .3s ease-in-out;
             margin: 2rem 0;
             align-self: stretch;
 
             &:hover {
-                outline: 1px solid #07EA02;
                 background-color: transparent;
             }
             

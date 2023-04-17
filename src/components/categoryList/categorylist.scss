@@ -3,6 +3,10 @@
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
     
     li {
         padding: .4rem 1.4rem;

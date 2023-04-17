@@ -22,8 +22,8 @@ export default function Project() {
     <main>
       <section className='project-section'>
         {/* <button className='back label-large' onClick={goBack}><ArrowBack/>back to projects</button> */}
+        <h2 className='title-large'>You might also like</h2>
         <CategoryList/>
-        {/* <h2 className='title-large'>Similar projects</h2> */}
         <ProjectList category={category}/>
       </section>
       <aside className='project-aside'>
