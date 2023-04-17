@@ -1,13 +1,19 @@
-export const getToken = () => {
-  return localStorage.getItem(process.env.AUTH_TOKEN);
-};
+export const dateOnCard = (isoDate) => {
+  const date = new Date(isoDate);
+  const formattedDate = date.toLocaleDateString('en-GB');
 
-export const setToken = (token) => {
-  if (token) {
-    localStorage.setItem(process.env.AUTH_TOKEN, token);
-  }
-};
+  const parts = formattedDate.split('/');
+  const formattedParts = [parts[1], parts[0], parts[2]].join('-');
 
-export const removeToken = () => {
-  localStorage.removeItem(process.env.AUTH_TOKEN);
-};
+  return formattedParts
+  // Output: "11-04-2023"
+}
+
+export const dateOnDesc = (isoDate) => {
+  const date = new Date(isoDate);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
+
+  return formattedDate
+  // Output: "April 11, 2023"
+}

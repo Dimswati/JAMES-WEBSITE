@@ -118,14 +118,34 @@ main {
     width: 90vw;
     margin: auto;
     gap: 2rem;
+    flex-direction: row-reverse;
+
+    @media (max-width: 780px) {
+        flex-direction: column-reverse;
+    }   
 
     section {
         flex: 2;
+        
+        @media (max-width: 1150px) {
+            flex: 1.5;
+        }    
+
+        @media (max-width: 980px) {
+            flex: 1.2;
+        }    
+        
+        @media (max-width: 880px) {
+            flex: 1;
+        }   
+        
+        
     }
 
     aside {
         flex: 1;
-        border-left: 1px solid var(--md-sys-color-outline-variant);
+        // border-right: 1px solid var(--md-sys-color-outline-variant);
+        // background-color: aqua;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -140,14 +160,24 @@ main {
         &::-webkit-scrollbar{
             display: none;
         }
+
+        @media (max-width: 1150px) {
+            flex: 1;
+        } 
+        
+        @media (max-width: 780px) {
+            top: 0rem;
+            position: relative;
+        }   
     }
 }
 
 button {
-    color: var(--md-sys-color-on-secondary-container);
-    padding: .6rem 0rem;
-    border-radius: 50px;
-    background-color: transparent;
-    border: 1px solid var(--md-sys-color-outline);
+    padding: 0;
+    border: none;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
     cursor: pointer;
 }

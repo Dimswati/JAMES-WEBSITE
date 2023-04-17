@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import fetchUser from "../api/fetchUser";
 
-export const AuthContext = createContext({
+export const CategoryContext = createContext({
     user: undefined,
     isLoading: false,
     setUser: ()=>{},

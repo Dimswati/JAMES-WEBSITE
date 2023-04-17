@@ -1,12 +1,14 @@
 import React from 'react'
-import { EmailRounded, LocalPhoneRounded } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import { Menu, EmailRounded, LocalPhoneRounded } from '@mui/icons-material';
 import "./header.scss";
 
 export default function Header() {
+
   return (
     <header className='header'>
         <div className='header-content'>
-          <h2 className='headline-small'>James welding & metal work</h2>
+          <Link className='headline-small' to="/">James welding & metal work</Link>
           <div className="contact">
             <div className="contact__phone">
               <LocalPhoneRounded/>
@@ -17,6 +19,7 @@ export default function Header() {
               <span className="body-large">james@jjwelding.com</span>
             </div>
           </div>
+          <button><Menu /></button>
         </div>
     </header>
   )

@@ -1,35 +1,17 @@
-import React from 'react'
 import { Star, StarBorder } from '@mui/icons-material';
 import ProjectList from '../../components/projectlist/ProjectList';
 import "./index.scss"
+import useFetch from '../../hooks/useFetch';
+import CategoryList from '../../components/categoryList/CategoryList';
 
 export default function Index() {
+
   return (
     <main>
         <section className='index-section'>
           <h2 className="title-large">Here is what I can build for you</h2>
-          <ul className='categories'>
-            <li className='label-large active'>
-              <a href="">Gates</a>
-            </li>
-            <li className='label-large'>
-              <a href="">Doors</a>
-            </li>
-            <li className='label-large'>
-              <a href="">Windows</a>
-            </li>
-            <li className='label-large'>
-              <a href="">Doors</a>
-            </li>
-            <li className='label-large'>
-              <a href="">Locks</a>
-            </li>
-            <li className='label-large'>
-              <a href="">Grills</a>
-            </li>
-          </ul>
-          {/* <h2 className='title-medium'>Doors <span>25 projects</span> </h2> */}
-        <ProjectList/>
+          <CategoryList/>
+        <ProjectList category="all"/>
         </section>
         <aside className='index-aside'>
           <div className='james-image'>

@@ -1,31 +1,28 @@
-import React from 'react'
 import SingleProject from '../singleproject/SingleProject'
 import "./projectlist.scss"
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import useFetch from '../../hooks/useFetch';
 
-export default function ProjectList() {
+export default function ProjectList({category}) {
 
-  const [isEdit, setIsEdit] = useState(false)
-  
-  let { pathname } = useLocation(null)
+  let url;
 
-  useEffect(()=>{ 
-    if(pathname.includes("edit")){
-      setIsEdit(true)
-    }
-  }, [pathname])
+  if (category === "all"){
+    url = '/projects?filters[isFeatured][$eq]=true&populate=*' 
+  }else {
+    url = `/projects?filters[$and][0][category][category][$eqi]=${category}&populate=*`
+  }  
+
+  const { rawData, isLoading, error } = useFetch(url)
 
   return (
     <section className='projects'>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
-        <SingleProject isEdit={isEdit}/>
+    {
+       rawData?.data.map(project => {
+         return (<SingleProject key={project.id} project={project}/>)
+       })
+    }
     </section>
   )
 }
+
+

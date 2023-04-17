@@ -1,6 +1,14 @@
 main {
 
     .project-section {
+        .back {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .5rem 1rem;
+        }
+
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
@@ -15,55 +23,65 @@ main {
     .project-aside {
         display: flex;
         flex-direction: column;
-
+        
         .slider{
             margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .project-details {
-            width: 330px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1.5rem;
-            padding: 1rem;
-            border-radius: 16px;
-            box-shadow: var(--elevation-one);
-            z-index: 100;
-            background-color: var(--md-sys-color-surface-container-lowest);
+            width: 330px; 
 
-            .project-detail {
-                display: flex;
-                flex-direction: column;
-                gap: .5rem;
+            .project-details-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                padding: 1rem;
+                gap: 1.5rem;
+                border-radius: 16px;
+                box-shadow: var(--elevation-one);
+                // border: 1px solid var(--md-sys-color-outline-variant);
+                background-color: var(--md-sys-color-surface-container-lowest);
 
-                h4 {
-                    font-weight: 500;
-                }
-
-                span {
+                .project-detail {
                     display: flex;
-                    align-items: center;
-                    padding: .2rem 1rem;
-                    background-color: #06ea028c;
-                    border-radius: 50px;
-                    align-self: flex-start;
-                    color: var(--md-sys-color-on-background);
+                    flex-direction: column;
+                    gap: .5rem;
+    
+                    h4 {
+                        font-weight: 500;
+                    }
+    
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        padding: .2rem 1rem;
+                        // background-color: #06ea028c;
+                        outline: 1px solid #07EA02;
+                        border-radius: 50px;
+                        align-self: flex-start;
+                        color: var(--md-sys-color-on-background);
+    
+                        svg {
+                            color: #07EA02;
+                        }
+                    }
                 }
             }
         }
 
         .whatsapp-button {
-            align-self: flex-start;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 1rem;
             background-color: #07EA02;
+            border-radius: 50px;
             padding: .6rem 2rem;
             border: none;
             transition: all .3s ease-in-out;
-            margin-top: 2rem;
-            align-self: center;
+            margin: 2rem;
+            align-self: stretch;
 
             &:hover {
                 outline: 1px solid #07EA02;
@@ -97,5 +115,6 @@ main {
                 }
             }
         }
+
     }
 }

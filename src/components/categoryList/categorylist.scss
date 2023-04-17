@@ -1,0 +1,28 @@
+.categories {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    li {
+        padding: .4rem 1.4rem;
+        background-color: transparent;
+        outline: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 50px;
+        
+        a {
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        &:hover{
+            background-color: var(--md-sys-color-surface-container-low);
+            cursor: pointer;
+        }
+
+        &.selected{
+            color: var(--md-sys-color-on-secondary-container);
+            background-color: var(--md-sys-color-secondary-container);
+        }
+    }
+
+}
