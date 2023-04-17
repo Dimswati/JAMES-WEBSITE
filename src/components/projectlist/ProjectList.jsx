@@ -26,14 +26,15 @@ export default function ProjectList({category}) {
   const { rawData, isLoading, error } = useFetch(url)
 
   return (
-    <section className='projects'>
-    {
-       rawData?.data.map(project => {
-         return (<SingleProject key={project.id} project={project}/>)
-       })
-    }
-
-    <button>Load More</button>
+    <section>
+      <div className="projects">
+        {
+        rawData?.data.map(project => {
+          return (<SingleProject key={project.id} project={project}/>)
+        })
+        }
+      </div>
+      <button className='label-large'>Load More</button>
     </section>
   )
 }

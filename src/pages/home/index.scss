@@ -9,7 +9,7 @@ main {
 
             @media (max-width: 780px) {
                 align-self: center;
-                margin: 0;
+                margin-bottom: 1rem;
                 text-align: center;
                 border-bottom: 1px solid var(--md-sys-color-outline-variant);
             }   
@@ -87,7 +87,6 @@ main {
             h2{
                 padding-bottom: .3rem;
                 border-bottom: 1px solid var(--md-sys-color-outline-variant);
-                // margin-bottom: .5rem;
             }
     
             article {
@@ -138,6 +137,10 @@ main {
                 padding-bottom: .3rem;
                 border-bottom: 1px solid var(--md-sys-color-outline-variant);
                 margin-bottom: 1.5rem;
+
+                @media (max-width: 780px) {
+                    margin-bottom: 1rem;
+                }   
             }
     
             article {
