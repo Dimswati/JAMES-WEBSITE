@@ -8,22 +8,25 @@ import Project from './pages/project/Project';
 import SharedLayout from "./components/sharedlayout/SharedLayout";
 
 import "./app.scss"
+import ModalProvider from "./context/ModalContext";
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout/>}>
-          <Route index element={<Index/>}/>
-          <Route path=":category">
-            <Route index element={<Projects/>}/>
-            <Route path=":projectId" element={<Project/>}/>
+    <ModalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedLayout/>}>
+            <Route index element={<Index/>}/>
+            <Route path=":category">
+              <Route index element={<Projects/>}/>
+              <Route path=":projectId" element={<Project/>}/>
+            </Route>
+            <Route path="*" element={<Error/>}/>
           </Route>
-          <Route path="*" element={<Error/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </ModalProvider>
   )
 }
 

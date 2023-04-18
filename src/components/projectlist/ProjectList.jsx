@@ -32,13 +32,13 @@ export default function ProjectList({category}) {
   useEffect(()=>{
     async function fetchData (page){
       try {
-        const res = await api.get(`${url}pagination[page]=${page}&pagination[pageSize]=6&populate=*`)
+        const res = await api.get(`${url}pagination[page]=${page}&pagination[pageSize]=4&populate=*`)
         setData(prevArr => {
           return prevArr.concat(res.data.data)
         })
 
         setMeta(res.data.meta)
-        console.log(res.data)
+        console.log(res.data.data)
       }catch(error){
         console.log(error)
       }
