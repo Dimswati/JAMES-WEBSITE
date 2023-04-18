@@ -8,7 +8,7 @@ export const api = axios.create({
     }
 })
 
-export const getProjectsPage = async() => {
-
+export const getProjectsPage = async(pageParam = 1, options = {}) => {
+    const response = await api.get()
 }
 

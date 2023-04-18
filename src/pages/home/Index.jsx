@@ -87,8 +87,8 @@ export default function Index() {
               </div>
             </article>
             <article>
-              <h2 className='title-medium'>Jane maina</h2>
-              <p className='body-medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil odio illum officia consequuntur, eligendi amet debitis eum explicabo provident earum.</p>
+              <h2 className='body-large'>Jane maina</h2>
+              <p className='body-medium'>Marvelous job, build for me this gate in two days,</p>
               <div className='rating'>
                 <Star/>
                 <Star/>
@@ -98,8 +98,8 @@ export default function Index() {
               </div>
             </article>
             <article>
-              <h2 className='title-medium'>Jane maina</h2>
-              <p className='body-medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil odio illum officia consequuntur, eligendi amet debitis eum explicabo provident earum.</p>
+              <h2 className='body-large'>Jane maina</h2>
+              <p className='body-medium'>He underpromises but overdelivers, like this man</p>
               <div className='rating'>
                 <Star/>
                 <Star/>

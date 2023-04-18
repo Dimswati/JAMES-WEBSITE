@@ -9,19 +9,15 @@ import { dateOnDesc } from '../../helpers';
 
 export default function SingleProject({project}) {
 
-  const { featuredImage, publishedAt, category } = project?.attributes
-
-  console.log(publishedAt)
-
   return (
-    <Link className='single-project' to={`/${category?.data.attributes.slug}/${project.id}`}>
-      <img src={`${app_url}${featuredImage?.data.attributes.url}`} alt="image" />
+    <article className='single-project' >
+      <Link to={`/${project?.attributes.category.data.attributes.slug}/${project.id}`}><img src={`${app_url}${project?.attributes.featuredImage.data.attributes.url}`} alt="image" /></Link>
       <div className='lower-card-section'>
         <div className='icons'>
             <Share/>
         </div>
-        <span className='label-large'>{dateOnDesc(publishedAt)}</span>
+        <span className='label-large'>{dateOnDesc(project?.attributes.publishedAt)}</span>
       </div>
-    </Link>
+    </article>
   )
 }

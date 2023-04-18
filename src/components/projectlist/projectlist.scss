@@ -1,8 +1,4 @@
-section {
-    display: flex;
-    flex-direction: column;
-
-    .projects {
+.projects {
         display: grid;
         grid-template-columns: repeat( auto-fill, minmax(320px, 1fr) );
         grid-template-rows: auto;
@@ -15,12 +11,11 @@ section {
         }   
     }
 
-    button {
-        align-self: center;
-        padding: .5rem 2rem;
-        border-radius: 50px;
-        background-color: var(--md-sys-color-primary-container);
-        color: var(--md-sys-color-on-primary-container);
-        margin-bottom: 1rem;
-    }
-}
+    // button {
+    //     align-self: center;
+    //     padding: .5rem 2rem;
+    //     border-radius: 50px;
+    //     background-color: var(--md-sys-color-primary-container);
+    //     color: var(--md-sys-color-on-primary-container);
+    //     margin-bottom: 1rem;
+    // }
